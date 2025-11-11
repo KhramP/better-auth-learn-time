@@ -11,7 +11,7 @@ import { redirect } from "next/navigation";
 import { ac, admin, user } from "@/components/auth/permissions";
 
 export const authClient = createAuthClient({
-  baseURL: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
+  baseURL: process.env.NEXT_PUBLIC_APP_URL,
   plugins: [
     inferAdditionalFields<typeof auth>(),
     passkeyClient(),
