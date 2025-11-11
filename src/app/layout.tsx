@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import { ImpersonationIndicator } from "@/components/auth/impersonation-indicator";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}>
-        {children}
+        <Suspense>{children}</Suspense>
         <Toaster position="top-right" />
         <ImpersonationIndicator />
       </body>
