@@ -4,7 +4,7 @@ import { headers } from "next/headers";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { InviteInformation } from "./_components/invite-information";
 
-export default async function InvitationPage({ params }: { params: { id: string } }) {
+export default async function InvitationPage({ params }: PageProps<"/organizations/invites/[id]">) {
   const session = await auth.api.getSession({ headers: await headers() });
   if (session == null) return redirect("/auth/login");
 
