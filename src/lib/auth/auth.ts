@@ -1,6 +1,6 @@
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
-import { PrismaClient } from "@/generated/prisma/client";
+import { PrismaClient } from "@prisma/client";
 import { nextCookies } from "better-auth/next-js";
 import { sendPasswordResetEmail } from "../emails/password-reset-email";
 import { sendEmailVerificationEmail } from "../emails/email-verification";
